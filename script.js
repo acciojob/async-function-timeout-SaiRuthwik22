@@ -1,8 +1,8 @@
 //your JS code here. If required.
 function myPromise(delay) {
+	let text = document.getElementById("text").value
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            let text = document.getElementById("text").value
             resolve(text);
         }, delay)
     })
@@ -11,7 +11,7 @@ function myPromise(delay) {
 async function myFunc(event) {
     event.preventDefault();
     let delay = document.getElementById("delay").value;
-    let text = await myPromise(delay);
+    let text1 = await myPromise(delay);
     let output = document.getElementById("output");
-    output.textContent = text;
+    output.textContent = text1;
 }
